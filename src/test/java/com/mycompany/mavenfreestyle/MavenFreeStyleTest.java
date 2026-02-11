@@ -2,8 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
-package com.mycompany.mavenfreestyle;
 
+import com.mycompany.miclase.MiClase;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,36 +13,51 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author olivert
+ * @author David Catena
  */
-public class MavenFreeStyleTest {
-    
-    public MavenFreeStyleTest() {
-    }
 
-    /**
-     * Test of main method, of class MavenFreeStyle.
-     */
+ // @Test
+    // public void x() {}
+
+public class NewEmptyJUnitTest {
+    
     @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        MavenFreeStyle.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    @Test 
-    public void testFibonacci(){
-        //App test = new App();
-        MavenFreeStyle instance = new MavenFreeStyle();
-	assertTrue(instance.fibonacci(1) == 1);
-    }
-    @Test	
-    public void testFibonacci2(){
-	//App test = new App();
-        MavenFreeStyle instance = new MavenFreeStyle();
-        assertTrue(instance.fibonacci(10) == 5);
+    public void dia_laboral() {
+        assertTrue(MiClase.dia_laboral("lunes"));
+        assertTrue(MiClase.dia_laboral("Lunes"));
+        
+        assertTrue(MiClase.dia_laboral("martes"));
+        assertTrue(MiClase.dia_laboral("Martes"));
+        
+        assertTrue(MiClase.dia_laboral("miércoles"));
+        assertTrue(MiClase.dia_laboral("Miércoles"));
+        
+        assertTrue(MiClase.dia_laboral("jueves"));
+        assertTrue(MiClase.dia_laboral("Jueves"));
+        
+        assertTrue(MiClase.dia_laboral("viernes"));
+        assertTrue(MiClase.dia_laboral("Viernes"));
+        
+        assertTrue(MiClase.dia_laboral("sábado"));
+        assertTrue(MiClase.dia_laboral("Sábado"));
+        
+        assertTrue(MiClase.dia_laboral("domingo"));
+        assertTrue(MiClase.dia_laboral("Domingo"));
     }
     
+  
+    @Test
+    public void dia_laboralLunes() {
+        assertEquals(MiClase.dia_laboral("martes"), false);
+    }
+    
+    @Test
+    public void dia_laboralMartes() {
+        assertEquals(MiClase.dia_laboral("martes"), true);
+    }
+
+    // TODO add test methods here.
+    // The methods must be annotated with annotation @Test. For example:
+    //
+   
 }
